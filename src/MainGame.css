@@ -11,18 +11,19 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 80vw;
   height: 100vh;
-  background-color: red;
+  /* background-color: red; */
 }
 
 .cow-row {
   container-type: size;
-  inline-size: 92vw;
+  inline-size: 100%;
   aspect-ratio: 16 / 9;
   display: grid;
   place-items: end center;
   overflow: hidden;
+  /* background-color: blue; */
 }
 
 .field,
@@ -31,12 +32,13 @@
 }
 
 .field {
-  inline-size: 50cqmin;
+  inline-size: 140cqmin;
   object-fit: contain;
   object-position: bottom center;
+  /* background-color: green; */
 }
 
 .cow {
-  inline-size: 22cqmin;
+  inline-size: 80cqmin;
   translate: 0 -3cqb;
 }
