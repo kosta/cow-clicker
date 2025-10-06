@@ -61,3 +61,22 @@
   object-position: bottom center;
   /* background-color: green; */
 }
+
+/* Big red comic-like counter without external web fonts */
+.count-display {
+  font-family: "Comic Sans MS", "Comic Sans", "Marker Felt", "Chalkboard SE", "Chalkboard", "Segoe Print", "Bradley Hand", cursive;
+  color: #ff2b2b;
+  font-weight: 700;
+  font-size: clamp(3rem, 12vw, 12rem);
+  line-height: 1;
+  text-align: center;
+  -webkit-text-stroke: 2px #000;
+  text-shadow:
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    0 0 10px rgba(0, 0, 0, 0.25);
+  margin: 1rem;
+  user-select: none;
+}

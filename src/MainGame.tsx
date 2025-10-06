@@ -9,6 +9,7 @@ export const MainGame = () => {
   return (
     <div className="main-game">
       <div className="main-row">
+        <div className="count-display">{count}</div>
         <div className="cow-row">
           <img src={fieldSrc} className="field" alt="field" />
           <button
