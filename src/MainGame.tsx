@@ -11,7 +11,14 @@ export const MainGame = () => {
       <div className="main-row">
         <div className="cow-row">
           <img src={fieldSrc} className="field" alt="field" />
-          <img src={cowWhiteSrc} className="cow" alt="cow" />
+          <button
+            type="button"
+            onClick={() => setCount((count) => count + 1)}
+            aria-label="Click the cow"
+            className="cow-button"
+          >
+            <img src={cowWhiteSrc} className="cow" alt="" aria-hidden="true" />
+          </button>
         </div>
       </div>
     </div>
