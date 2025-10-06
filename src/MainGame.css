@@ -1,0 +1,42 @@
+.main-game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.main-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 100vh;
+  background-color: red;
+}
+
+.cow-row {
+  container-type: size;
+  inline-size: 92vw;
+  aspect-ratio: 16 / 9;
+  display: grid;
+  place-items: end center;
+  overflow: hidden;
+}
+
+.field,
+.cow {
+  grid-area: 1 / 1;
+}
+
+.field {
+  inline-size: 50cqmin;
+  object-fit: contain;
+  object-position: bottom center;
+}
+
+.cow {
+  inline-size: 22cqmin;
+  translate: 0 -3cqb;
+}
