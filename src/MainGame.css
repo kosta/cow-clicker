@@ -32,6 +32,8 @@
 
 .cow {
   grid-area: 1 / 1;
+  inline-size: 80cqmin;
+  translate: 0 -10cqb;
 }
 
 .cow:hover {
@@ -45,9 +47,4 @@
   object-fit: contain;
   object-position: bottom center;
   /* background-color: green; */
-}
-
-.cow {
-  inline-size: 80cqmin;
-  translate: 0 -3cqb;
 }
