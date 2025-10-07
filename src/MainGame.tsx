@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import cowWhiteSrc from './assets/cow-white.png'
 import fieldSrc from './assets/field.png'
+import backgroundSkySrc from './assets/background-sky.png'
 import './MainGame.css'
 
 export const MainGame = () => {
@@ -8,7 +9,7 @@ export const MainGame = () => {
 
   return (
     <div className="main-game">
-      <div className="main-row">
+      <div className="main-row" style={{ backgroundImage: `url(${backgroundSkySrc})` }}>
         <div className="count-display">{count}</div>
         <div className="cow-row">
           <img src={fieldSrc} className="field" alt="field" />

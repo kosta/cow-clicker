@@ -11,8 +11,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80vw;
-  height: 100vh;
+  aspect-ratio: 10 / 16;
+  width: min(100vw, calc(100vh * 10 / 16));
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   /* background-color: red; */
 }
 
@@ -24,6 +29,10 @@
   place-items: end center;
   overflow: hidden;
   /* background-color: blue; */
+}
+
+.background-sky {
+  grid-area: 1 / 1;
 }
 
 .field {
@@ -67,7 +76,7 @@
   font-family: "Comic Sans MS", "Comic Sans", "Marker Felt", "Chalkboard SE", "Chalkboard", "Segoe Print", "Bradley Hand", cursive;
   color: #ff2b2b;
   font-weight: 700;
-  font-size: clamp(3rem, 12vw, 12rem);
+  font-size: 12cqw;
   font-synthesis: style;
   font-style: oblique 7deg;
   line-height: 1;
