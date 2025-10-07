@@ -1,4 +1,4 @@
-import { Outlet, Scripts } from "react-router";
+import { Links, Meta, Outlet, Scripts } from "react-router";
 
 import "./global-styles.css";
 
@@ -15,6 +15,8 @@ const CowClickerLayout = ({ children }: { children: React.ReactNode }) => {
         <meta name="apple-mobile-web-app-title" content="Cow Clicker" />
         <title>Cow Clicker</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <Meta />
+        <Links />
       </head>
 
       <body>
