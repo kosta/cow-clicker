@@ -1,6 +1,6 @@
 import { Outlet, Scripts } from "react-router";
 
-import "./root.css";
+import "./global-styles.css";
 
 const CowClickerLayout = ({ children }: { children: React.ReactNode }) => {
   return (

@@ -3,26 +3,25 @@ import cowWhiteSrc from './assets/cow-white.png'
 import fieldSrc from './assets/field.png'
 import backgroundSkySrc from './assets/background-sky.png'
 import './MainGame.css'
+import { MainRow } from '@/MainRow'
 
 export const MainGame = () => {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="main-game">
-      <div className="main-row" style={{ backgroundImage: `url(${backgroundSkySrc})` }}>
-        <div className="count-display">{count}</div>
-        <div className="cow-row">
-          <img src={fieldSrc} className="field" alt="field" />
-          <button
-            type="button"
-            onClick={() => setCount((count) => count + 1)}
-            aria-label="Click the cow"
-            className="cow-button"
-          >
-            <img src={cowWhiteSrc} className="cow" alt="" aria-hidden="true" />
-          </button>
-        </div>
+    <MainRow backgroundImageSrc={backgroundSkySrc}>
+      <div className="count-display">{count}</div>
+      <div className="cow-row">
+        <img src={fieldSrc} className="field" alt="field" />
+        <button
+          type="button"
+          onClick={() => setCount((count) => count + 1)}
+          aria-label="Click the cow"
+          className="cow-button"
+        >
+          <img src={cowWhiteSrc} className="cow" alt="" aria-hidden="true" />
+        </button>
       </div>
-    </div>
+    </MainRow>
   )
 }
