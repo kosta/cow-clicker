@@ -20,9 +20,9 @@ export const MainGame = () => {
       >
         &lt;
       </button>
-      <div className="count-display">{count}</div>
+      <div className="count-display" role="status" aria-live="polite" aria-atomic="true">{count}</div>
       <div className="cow-row">
-        <img src={fieldSrc} className="field" alt="field" />
+        <img src={fieldSrc} className="field" alt="the field that the cow stands on" aria-hidden="true" />
         <button
           type="button"
           onClick={() => setCount((count) => count + 1)}

@@ -8,8 +8,8 @@ export default function StartScreen() {
   const navigate = useNavigate();
 
   return <MainRow backgroundImageSrc={startScreenSrc}>
-    <button className="start-button hover-highlight unstyled-button" onClick={() => navigate("/cow")}>
-      <img src={startButtonSrc} alt="Start Game" />
+    <button className="start-button hover-highlight unstyled-button" onClick={() => navigate("/cow")} aria-label="Start game">
+      <img src={startButtonSrc} alt="Start game" aria-hidden="true" />
     </button>
   </MainRow>
 }
