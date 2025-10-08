@@ -1,6 +1,7 @@
 import { Links, Meta, Outlet, Scripts } from "react-router";
 
-import "./global-styles.css";
+import "@/global-styles.css";
+import Spinner from "@/components/Spinner";
 
 const CowClickerLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -34,5 +35,5 @@ export default function App() {
 
 
 export function HydrateFallback() {
-  return <CowClickerLayout>loading...</CowClickerLayout>
+  return <CowClickerLayout><Spinner /></CowClickerLayout>
 }

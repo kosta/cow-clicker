@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import cowWhiteSrc from './assets/cow-white.png'
-import fieldSrc from './assets/field.png'
-import backgroundSkySrc from './assets/background-sky.png'
-import './MainGame.css'
-import { MainRow } from '@/MainRow'
+import cowWhiteSrc from '@/assets/cow-white.png'
+import fieldSrc from '@/assets/field.png'
+import backgroundSkySrc from '@/assets/background-sky.png'
+import '@/pages/MainGame.css'
+import { MainRow } from '@/components/MainRow'
 
 export const MainGame = () => {
   const [count, setCount] = useState(0)

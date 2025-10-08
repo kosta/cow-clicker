@@ -1,4 +1,4 @@
-import StartScreen from "@/StartScreen";
+import StartScreen from "@/pages/StartScreen";
 
 export default function Index() {
   return <StartScreen />;

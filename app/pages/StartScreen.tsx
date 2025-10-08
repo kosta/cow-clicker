@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router";
-import startScreenSrc from "./assets/start-screen.png";
-import "./StartScreen.css";
-import { MainRow } from "@/MainRow";
+import startScreenSrc from "@/assets/start-screen.png";
+import "@/pages/StartScreen.css";
+import { MainRow } from "@/components/MainRow";
 
 export default function StartScreen() {
   const navigate = useNavigate();
