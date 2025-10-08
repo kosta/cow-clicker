@@ -5,8 +5,10 @@ import fieldSrc from '@/assets/field.png'
 import backgroundSkySrc from '@/assets/background-sky.png'
 import '@/pages/MainGame.css'
 import { MainRow } from '@/components/MainRow'
+import Spinner from '@/components/Spinner'
 
 const NEXT_CLICK_DELAY = 1000; // 1 second
+const INTERVAL_MS = Math.floor(1000 / 24); // 24 fps
 
 export const MainGame = () => {
   const [count, setCount] = useState(0)
@@ -21,7 +23,7 @@ export const MainGame = () => {
       if (preventClickUntil && Date.now() > preventClickUntil) {
         setPreventClickUntil(null)
       }
-    }, 50);
+    }, INTERVAL_MS);
     return () => clearInterval(intervalId)
   }, [preventClickUntil])
 
@@ -46,6 +48,7 @@ export const MainGame = () => {
           className={`cow-button ${preventClickUntil === null ? 'hover-highlight' : ''} unstyled-button`}
         >
           <img src={cowWhiteSrc} className="cow" alt="" aria-hidden="true" />
+          {preventClickUntil && <Spinner className='spinner__cow' />}
         </button>
       </div>
     </MainRow>

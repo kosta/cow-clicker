@@ -66,3 +66,12 @@
   align-self: start;
   color: #3179c2;
 }
+
+.spinner__cow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  translate: 6cqb -6cqb;
+}
