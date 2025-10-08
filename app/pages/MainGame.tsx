@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router'
 import cowWhiteSrc from '@/assets/cow-white.png'
 import fieldSrc from '@/assets/field.png'
 import backgroundSkySrc from '@/assets/background-sky.png'
@@ -7,9 +8,18 @@ import { MainRow } from '@/components/MainRow'
 
 export const MainGame = () => {
   const [count, setCount] = useState(0)
+  const navigate = useNavigate()
 
   return (
     <MainRow backgroundImageSrc={backgroundSkySrc}>
+      <button
+        type="button"
+        aria-label="Back to start"
+        className="back-button unstyled-button"
+        onClick={() => navigate('/')}
+      >
+        &lt;
+      </button>
       <div className="count-display">{count}</div>
       <div className="cow-row">
         <img src={fieldSrc} className="field" alt="field" />
