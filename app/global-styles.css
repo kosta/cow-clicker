@@ -56,3 +56,18 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+.unstyled-button {
+  background: none;
+  border: 0;
+  padding: 0;
+  border-radius: 0;
+  appearance: none;
+  color: inherit;
+  font: inherit;
+}
+
+.hover-highlight:hover {
+  filter:
+    drop-shadow(1px 0 0 #ffd700) drop-shadow(-1px 0 0 #ffd700) drop-shadow(0 1px 0 #ffd700) drop-shadow(0 -1px 0 #ffd700) drop-shadow(0 0 6px rgba(255, 215, 0, 0.6));
+}

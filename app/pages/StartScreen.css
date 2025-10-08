@@ -1,4 +1,11 @@
 .start-button {
   margin-top: auto;
-  margin-bottom: 10cqb;
+  margin-bottom: 5cqb;
+  width: 50%;
+}
+
+.start-button img {
+  display: block;
+  width: 100%;
+  height: auto;
 }

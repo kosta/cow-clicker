@@ -17,7 +17,7 @@ export const MainGame = () => {
           type="button"
           onClick={() => setCount((count) => count + 1)}
           aria-label="Click the cow"
-          className="cow-button"
+          className="cow-button hover-highlight unstyled-button"
         >
           <img src={cowWhiteSrc} className="cow" alt="" aria-hidden="true" />
         </button>
