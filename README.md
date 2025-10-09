@@ -14,6 +14,5 @@ Deployed at https://cow.kosta.io/
 
 ## Developing
 
-To generate the go connect-grpc code, follow https://connectrpc.com/docs/go/getting-started
-
-To generate the web connect-grpc code, follow https://connectrpc.com/docs/web/getting-started
+To generate the go and ts connect-grpc code, cd to `grpc-api` and run
+`npx buf generate`
