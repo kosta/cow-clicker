@@ -18,27 +18,36 @@ func (s *CowclickerServer) Click(
 ) (*cowclickerv1.ClickResponse, error) {
 	res := &cowclickerv1.ClickResponse{
 		ServerReceivedEpochMs: time.Now().UnixMilli(),
-		ServerSentEpochMs:     time.Now().UnixMilli(),
 		ClickCount:            1,
 	}
+
+	// do some work
+
+	res.ServerSentEpochMs = time.Now().UnixMilli()
 	return res, nil
 }
 
+const connectPrefix = "/connect"
+
 func main() {
-	server := &CowclickerServer{}
+	cowClickServer := &CowclickerServer{}
+	cowClickMux := http.NewServeMux()
+	cowClickMux.Handle(cowclickerv1connect.NewClickServiceHandler(cowClickServer))
+
+	// expose under /connect
 	mux := http.NewServeMux()
-	path, handler := cowclickerv1connect.NewClickServiceHandler(server)
-	mux.Handle(path, handler)
+	mux.Handle(connectPrefix, http.StripPrefix(connectPrefix, cowClickMux))
+
 	p := new(http.Protocols)
 	p.SetHTTP1(true)
 	// Use h2c so we can serve HTTP/2 without TLS.
 	p.SetUnencryptedHTTP2(true)
-	addr := "localhost:8080"
+	addr := ":8080"
 	s := http.Server{
 		Addr:      addr,
 		Handler:   mux,
 		Protocols: p,
 	}
-	fmt.Println("Server is running on", addr)
+	fmt.Println("Server is running on", addr, "under", connectPrefix)
 	s.ListenAndServe()
 }
