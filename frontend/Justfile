@@ -1,6 +1,18 @@
 timestamp := `date -u +%Y-%m-%dT%H-%M-%SZ`
 rel := "/var/www/cowclicker-deployments/" + timestamp
 
+# start the frontend and backend dev servers in parallel,
+# but in a way that kills it on ctrl+c etc.
+dev:
+  #!/usr/bin/env bash
+  set -euo pipefail
+  (cd ../backend && exec go run cmd/server/main.go) &
+  backend_pid=$!
+  npm run dev &
+  frontend_pid=$!
+  trap 'kill -TERM -$backend_pid -$frontend_pid 2>/dev/null; wait' INT TERM EXIT
+  wait
+
 build:
   npm run build
 

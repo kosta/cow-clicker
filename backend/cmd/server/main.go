@@ -28,6 +28,7 @@ func (s *CowclickerServer) Click(
 }
 
 const connectPrefix = "/connect"
+const addr = ":5174"
 
 func main() {
 	cowClickServer := &CowclickerServer{}
@@ -42,7 +43,6 @@ func main() {
 	p.SetHTTP1(true)
 	// Use h2c so we can serve HTTP/2 without TLS.
 	p.SetUnencryptedHTTP2(true)
-	addr := ":8080"
 	s := http.Server{
 		Addr:      addr,
 		Handler:   mux,
