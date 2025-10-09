@@ -7,8 +7,8 @@ package v1connect
 import (
 	connect "connectrpc.com/connect"
 	context "context"
+	v1 "cowclicker-grpc-api/gen/go/cowclicker/v1"
 	errors "errors"
-	v1 "github.com/kosta/cowclicker/grpc-api/cowclicker/v1"
 	http "net/http"
 	strings "strings"
 )

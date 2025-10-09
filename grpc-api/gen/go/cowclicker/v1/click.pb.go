@@ -129,7 +129,7 @@ const file_cowclicker_v1_click_proto_rawDesc = "" +
 	"\vclick_count\x18\x03 \x01(\x03R\n" +
 	"clickCount2R\n" +
 	"\fClickService\x12B\n" +
-	"\x05Click\x12\x1b.cowclicker.v1.ClickRequest\x1a\x1c.cowclicker.v1.ClickResponseB4Z2github.com/kosta/cowclicker/grpc-api/cowclicker/v1b\x06proto3"
+	"\x05Click\x12\x1b.cowclicker.v1.ClickRequest\x1a\x1c.cowclicker.v1.ClickResponseB*Z(cowclicker-grpc-api/gen/go/cowclicker/v1b\x06proto3"
 
 var (
 	file_cowclicker_v1_click_proto_rawDescOnce sync.Once

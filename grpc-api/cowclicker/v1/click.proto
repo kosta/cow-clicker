@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package cowclicker.v1;
 
-option go_package = "github.com/kosta/cowclicker/grpc-api/cowclicker/v1";
+option go_package = "cowclicker-grpc-api/gen/go/cowclicker/v1";
 
 service ClickService {
   rpc Click(ClickRequest) returns (ClickResponse);
