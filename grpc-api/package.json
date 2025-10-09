@@ -1,0 +1,28 @@
+{
+  "name": "cowclicker-grpc-api",
+  "version": "1.0.0",
+  "description": "cowclicker connect-grpc api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kosta/cowclicker.git"
+  },
+  "author": "Konstantin Welke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kosta/cowclicker/issues"
+  },
+  "homepage": "https://github.com/kosta/cowclicker#readme",
+  "devDependencies": {
+    "@bufbuild/buf": "1.58.0",
+    "@bufbuild/protoc-gen-es": "2.9.0"
+  },
+  "dependencies": {
+    "@bufbuild/protobuf": "2.9.0",
+    "@connectrpc/connect": "2.1.0",
+    "@connectrpc/connect-web": "2.1.0"
+  }
+}

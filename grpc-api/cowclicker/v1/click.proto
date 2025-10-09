@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package cowclicker.v1;
+
+option go_package = "github.com/kosta/cowclicker/grpc-api/cowclicker/v1";
+
+service ClickService {
+  rpc Click(ClickRequest) returns (ClickResponse);
+}
+
+message ClickRequest {
+}
+
+message ClickResponse {
+  int64 server_received_epoch_ms = 1;
+  int64 server_sent_epoch_ms = 2;
+  int64 click_count = 3;
+}
