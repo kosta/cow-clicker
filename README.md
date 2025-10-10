@@ -5,7 +5,11 @@ Deployed at https://cow.kosta.io/
 
 ## Features
 
-* You can click the cow.
+* You can click the cow. Currently, everyone shares the same cow.
+
+## Planned Features
+
+* Multiple named cows
 
 ## Known issues
 
