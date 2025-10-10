@@ -20,6 +20,8 @@ const SLEEP_DURATION_THRESHOLD = 200 * time.Millisecond
 
 // TODO: Move most of this into a proper package
 
+// TODO: TESTS!!!!1
+
 // TODO: Make generic
 func withServerTimings(fn func(now time.Time) (*cowclickerv1.ClickResponse, error)) (*cowclickerv1.ClickResponse, error) {
 	now := time.Now()
