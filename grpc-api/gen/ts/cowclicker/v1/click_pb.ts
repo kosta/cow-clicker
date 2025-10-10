@@ -10,7 +10,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file cowclicker/v1/click.proto.
  */
 export const file_cowclicker_v1_click: GenFile = /*@__PURE__*/
-  fileDesc("Chljb3djbGlja2VyL3YxL2NsaWNrLnByb3RvEg1jb3djbGlja2VyLnYxIg4KDENsaWNrUmVxdWVzdCJkCg1DbGlja1Jlc3BvbnNlEiAKGHNlcnZlcl9yZWNlaXZlZF9lcG9jaF9tcxgBIAEoAxIcChRzZXJ2ZXJfc2VudF9lcG9jaF9tcxgCIAEoAxITCgtjbGlja19jb3VudBgDIAEoAzJSCgxDbGlja1NlcnZpY2USQgoFQ2xpY2sSGy5jb3djbGlja2VyLnYxLkNsaWNrUmVxdWVzdBocLmNvd2NsaWNrZXIudjEuQ2xpY2tSZXNwb25zZUIqWihjb3djbGlja2VyLWdycGMtYXBpL2dlbi9nby9jb3djbGlja2VyL3YxYgZwcm90bzM");
+  fileDesc("Chljb3djbGlja2VyL3YxL2NsaWNrLnByb3RvEg1jb3djbGlja2VyLnYxIg4KDENsaWNrUmVxdWVzdCJkCg1DbGlja1Jlc3BvbnNlEiAKGHNlcnZlcl9yZWNlaXZlZF9lcG9jaF9tcxgBIAEoBBIcChRzZXJ2ZXJfc2VudF9lcG9jaF9tcxgCIAEoBBITCgtjbGlja19jb3VudBgDIAEoBDJSCgxDbGlja1NlcnZpY2USQgoFQ2xpY2sSGy5jb3djbGlja2VyLnYxLkNsaWNrUmVxdWVzdBocLmNvd2NsaWNrZXIudjEuQ2xpY2tSZXNwb25zZUIqWihjb3djbGlja2VyLWdycGMtYXBpL2dlbi9nby9jb3djbGlja2VyL3YxYgZwcm90bzM");
 
 /**
  * @generated from message cowclicker.v1.ClickRequest
@@ -30,17 +30,17 @@ export const ClickRequestSchema: GenMessage<ClickRequest> = /*@__PURE__*/
  */
 export type ClickResponse = Message<"cowclicker.v1.ClickResponse"> & {
   /**
-   * @generated from field: int64 server_received_epoch_ms = 1;
+   * @generated from field: uint64 server_received_epoch_ms = 1;
    */
   serverReceivedEpochMs: bigint;
 
   /**
-   * @generated from field: int64 server_sent_epoch_ms = 2;
+   * @generated from field: uint64 server_sent_epoch_ms = 2;
    */
   serverSentEpochMs: bigint;
 
   /**
-   * @generated from field: int64 click_count = 3;
+   * @generated from field: uint64 click_count = 3;
    */
   clickCount: bigint;
 };

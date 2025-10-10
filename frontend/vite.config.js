@@ -6,4 +6,9 @@ import tsconfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
   clearScreen: false,
   plugins: [reactRouter(), tsconfigPaths()],
+  server: {
+    proxy: {
+      '/connect': 'http://localhost:5174',
+    },
+  },
 })

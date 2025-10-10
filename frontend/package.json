@@ -11,7 +11,10 @@
     "typecheck": "tsc --noemit"
   },
   "dependencies": {
+    "@connectrpc/connect-query": "2.2.0",
+    "@connectrpc/connect-web": "2.1.0",
     "@react-router/node": "7.9.3",
+    "@tanstack/react-query": "5.90.2",
     "isbot": "^5",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",

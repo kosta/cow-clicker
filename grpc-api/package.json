@@ -18,7 +18,8 @@
   "homepage": "https://github.com/kosta/cowclicker#readme",
   "devDependencies": {
     "@bufbuild/buf": "1.58.0",
-    "@bufbuild/protoc-gen-es": "2.9.0"
+    "@bufbuild/protoc-gen-es": "2.9.0",
+    "@connectrpc/protoc-gen-connect-query": "2.2.0"
   },
   "dependencies": {
     "@bufbuild/protobuf": "2.9.0",

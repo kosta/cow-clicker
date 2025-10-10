@@ -2,6 +2,15 @@ import { Links, Meta, Outlet, Scripts } from "react-router";
 
 import "@/global-styles.css";
 import Spinner from "@/components/Spinner";
+import { createConnectTransport } from "@connectrpc/connect-web";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { TransportProvider } from "@connectrpc/connect-query";
+
+const finalTransport = createConnectTransport({
+  baseUrl: "/connect",
+});
+
+const queryClient = new QueryClient();
 
 const CowClickerLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -30,7 +39,11 @@ const CowClickerLayout = ({ children }: { children: React.ReactNode }) => {
 }
 
 export default function App() {
-  return <CowClickerLayout><Outlet /></CowClickerLayout>
+  return <TransportProvider transport={finalTransport}>
+    <QueryClientProvider client={queryClient}>
+      <CowClickerLayout><Outlet /></CowClickerLayout>
+    </QueryClientProvider>
+  </TransportProvider>
 }
 
 

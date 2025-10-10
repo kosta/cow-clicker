@@ -22,6 +22,9 @@
     "paths": {
       "@/*": [
         "./app/*"
+      ],
+      "@gen/*": [
+        "../grpc-api/gen/ts/*"
       ]
     },
     "esModuleInterop": true,

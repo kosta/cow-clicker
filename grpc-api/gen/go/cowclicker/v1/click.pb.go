@@ -59,9 +59,9 @@ func (*ClickRequest) Descriptor() ([]byte, []int) {
 
 type ClickResponse struct {
 	state                 protoimpl.MessageState `protogen:"open.v1"`
-	ServerReceivedEpochMs int64                  `protobuf:"varint,1,opt,name=server_received_epoch_ms,json=serverReceivedEpochMs,proto3" json:"server_received_epoch_ms,omitempty"`
-	ServerSentEpochMs     int64                  `protobuf:"varint,2,opt,name=server_sent_epoch_ms,json=serverSentEpochMs,proto3" json:"server_sent_epoch_ms,omitempty"`
-	ClickCount            int64                  `protobuf:"varint,3,opt,name=click_count,json=clickCount,proto3" json:"click_count,omitempty"`
+	ServerReceivedEpochMs uint64                 `protobuf:"varint,1,opt,name=server_received_epoch_ms,json=serverReceivedEpochMs,proto3" json:"server_received_epoch_ms,omitempty"`
+	ServerSentEpochMs     uint64                 `protobuf:"varint,2,opt,name=server_sent_epoch_ms,json=serverSentEpochMs,proto3" json:"server_sent_epoch_ms,omitempty"`
+	ClickCount            uint64                 `protobuf:"varint,3,opt,name=click_count,json=clickCount,proto3" json:"click_count,omitempty"`
 	unknownFields         protoimpl.UnknownFields
 	sizeCache             protoimpl.SizeCache
 }
@@ -96,21 +96,21 @@ func (*ClickResponse) Descriptor() ([]byte, []int) {
 	return file_cowclicker_v1_click_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *ClickResponse) GetServerReceivedEpochMs() int64 {
+func (x *ClickResponse) GetServerReceivedEpochMs() uint64 {
 	if x != nil {
 		return x.ServerReceivedEpochMs
 	}
 	return 0
 }
 
-func (x *ClickResponse) GetServerSentEpochMs() int64 {
+func (x *ClickResponse) GetServerSentEpochMs() uint64 {
 	if x != nil {
 		return x.ServerSentEpochMs
 	}
 	return 0
 }
 
-func (x *ClickResponse) GetClickCount() int64 {
+func (x *ClickResponse) GetClickCount() uint64 {
 	if x != nil {
 		return x.ClickCount
 	}
@@ -124,9 +124,9 @@ const file_cowclicker_v1_click_proto_rawDesc = "" +
 	"\x19cowclicker/v1/click.proto\x12\rcowclicker.v1\"\x0e\n" +
 	"\fClickRequest\"\x9a\x01\n" +
 	"\rClickResponse\x127\n" +
-	"\x18server_received_epoch_ms\x18\x01 \x01(\x03R\x15serverReceivedEpochMs\x12/\n" +
-	"\x14server_sent_epoch_ms\x18\x02 \x01(\x03R\x11serverSentEpochMs\x12\x1f\n" +
-	"\vclick_count\x18\x03 \x01(\x03R\n" +
+	"\x18server_received_epoch_ms\x18\x01 \x01(\x04R\x15serverReceivedEpochMs\x12/\n" +
+	"\x14server_sent_epoch_ms\x18\x02 \x01(\x04R\x11serverSentEpochMs\x12\x1f\n" +
+	"\vclick_count\x18\x03 \x01(\x04R\n" +
 	"clickCount2R\n" +
 	"\fClickService\x12B\n" +
 	"\x05Click\x12\x1b.cowclicker.v1.ClickRequest\x1a\x1c.cowclicker.v1.ClickResponseB*Z(cowclicker-grpc-api/gen/go/cowclicker/v1b\x06proto3"

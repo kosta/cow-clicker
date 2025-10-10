@@ -6,17 +6,30 @@ import backgroundSkySrc from '@/assets/background-sky.png'
 import '@/pages/MainGame.css'
 import { MainRow } from '@/components/MainRow'
 import Spinner from '@/components/Spinner'
+import { useMutation, useQuery } from '@connectrpc/connect-query'
+import { click } from '@gen/cowclicker/v1/click-ClickService_connectquery'
 
 const NEXT_CLICK_DELAY = 1000; // 1 second
 const INTERVAL_MS = Math.floor(1000 / 24); // 24 fps
 
 export const MainGame = () => {
+  const clickCountIsLoading = useState(true);
   const [count, setCount] = useState(0)
   const [preventClickUntil, setPreventClickUntil] = useState<number | null>(null)
   const navigate = useNavigate()
+  const { mutate: clickMutate, isPending: clickIsPending } = useMutation(click, {
+    onSuccess: (data) => {
+      console.log("got data", data)
+      setCount(Number(data.clickCount))
+      // TODO: set the preventClickUntil
+    },
+    onError: (error) => {
+      console.error("got error clickingerror", error)
+    }
+  });
+  const allowClick = !preventClickUntil && !clickIsPending;
   const handleClick = () => {
-    setPreventClickUntil(new Date(Date.now() + NEXT_CLICK_DELAY).getTime())
-    setCount((count) => count + 1)
+    clickMutate({})
   }
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -43,12 +56,12 @@ export const MainGame = () => {
         <button
           type="button"
           onClick={handleClick}
-          disabled={preventClickUntil !== null}
+          disabled={!allowClick}
           aria-label="Click the cow"
-          className={`cow-button ${preventClickUntil === null ? 'hover-highlight' : ''} unstyled-button`}
+          className={`cow-button ${allowClick ? 'hover-highlight' : ''} unstyled-button`}
         >
           <img src={cowWhiteSrc} className="cow" alt="" aria-hidden="true" />
-          {preventClickUntil && <Spinner className='spinner__cow' />}
+          {!allowClick && <Spinner className='spinner__cow' />}
         </button>
       </div>
     </MainRow>

@@ -12,3 +12,6 @@ plugins:
     out: gen/ts
     include_imports: true
     opt: target=ts
+  - local: protoc-gen-connect-query
+    out: gen/ts
+    opt: target=ts
