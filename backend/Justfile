@@ -1,0 +1,2 @@
+dev:
+  watchexec --restart --exts go,sum,mod --watch=.. -- go run ./cmd/server/main.go

@@ -6,7 +6,7 @@ rel := "/var/www/cowclicker-deployments/" + timestamp
 dev:
   #!/usr/bin/env bash
   set -euo pipefail
-  (cd ../backend && exec go run cmd/server/main.go) &
+  (just ../backend/dev) &
   backend_pid=$!
   npm run dev &
   frontend_pid=$!
